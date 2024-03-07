@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hangman</title>
+</head>
+<body>
+    <div class="container">
+        <div class="game-info">
+            <div class="game-name">Hangman 🔥😘</div>
+            <button class="clcik">Arabc</button>
+            <div class="category">
+                Word From: <span></span>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="hangman-draw">
+                <div class="the-draw">
+                    <div class="the-stand"></div>
+                    <div class="the-hang"></div>
+                    <div class="the-rope"></div>
+                    <div class="the-man">
+                        <div class="head"></div>
+                        <div class="body"></div>
+                        <div class="handes"></div>
+                        <div class="legs"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="letters"></div>
+        </div>
+        <hr>
+        <div class="letters-guess"></div>
+    </div>
+    <audio id="success" src="success-fanfare-trumpets-6185.mp3" preload="auto"></audio>
+    <audio id="fail" src="wah-wah-sad-trombone-6347.mp3" preload="auto"></audio>
+    <audio id="success1" src="yay-6120.mp3" preload="auto"></audio>
+    <audio id="fail1" src="negative_beeps-6008.mp3" preload="auto"></audio>
+
+    <video src="videoplayback.mp4"  id="mam" class="video"></video>
+    <video src="video2.mp4"  id="mam1" class="video1"></video>
+    <script src="main.js"></script>
+</body>
+</html>
