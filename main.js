@@ -1,9 +1,9 @@
 // Letters
 let lettersEnglish = 'abcdefghijklmnopqrstuvwxyz';
-let lettersArabic = 'ابتثجحخدذرزسشصضطظعغفقكلمنهوي'
-let lettersArrary = Array.from(lettersEnglish)
-let lettersArrary1 = Array.from(lettersArabic)
-let check = true
+let lettersArabic = 'ابتثجحخدذرزسشصضطظعغفقكلمنهوي';
+let lettersArrary = Array.from(lettersEnglish);
+let lettersArrary1 = Array.from(lettersArabic);
+let check = true;
 
 let clcik = document.querySelector(".clcik");
 clcik.addEventListener('click' , () => {
@@ -29,7 +29,6 @@ clcik.addEventListener('click' , () => {
             lettersContainer.appendChild(span);
         });
         check = false;
-
     }else{
         clcik.innerHTML = 'Arabic'
         lettersArrary.forEach(letter => {
@@ -121,7 +120,7 @@ lettersAndSpace.forEach(letter => {
 
 //Slect Guess Spans
 let guessSpans = document.querySelectorAll(".letters-guess span");
-let arr = [];
+// let arr = [];
 
 // Set Worng Attempts
 let WorngAttempts = 0;
@@ -141,8 +140,7 @@ lettersContainer.addEventListener('click' , (even) => {
 
         //Get Clicked Letter
         let theClickedLetter = even.target.innerHTML.toLowerCase();
-        arr.push(theClickedLetter)
-        console.log(arr.length)
+
 
         //The Chosen Word
         lettersAndSpace.forEach((wordLetter , wordIndex) => {
@@ -181,7 +179,7 @@ lettersContainer.addEventListener('click' , (even) => {
                 setTimeout(() => {
                     video.pause()
                     video.style.display = 'none';
-                }, 12000)
+                }, 4000)
 
                     video.style.display = 'block';
                     video.play()
@@ -204,6 +202,13 @@ lettersContainer.addEventListener('click' , (even) => {
                     allGuessed = false;
                 }
             });
+
+            guessSpans.forEach(span => {
+                if (span.innerHTML === '' ) {
+                    
+                }
+            });
+
 
             if (allGuessed) {
                 setTimeout(() => {
@@ -272,7 +277,7 @@ function endGame2(){
 
     setTimeout(() => {
         location.reload();
-    }, 12000)
+    }, 7000)
 }
 
 console.log(randomvalueValue)
